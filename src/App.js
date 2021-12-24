@@ -1,4 +1,4 @@
-import React from 'react';
+import CreatePost from "./components/CreatePost"
 import './App.css';
 import React from "react";
 import { store } from "./redux/store";
@@ -8,7 +8,7 @@ const App = () => {
     return (
         <Provider store={store}>
             <div className="App">
-                <Posts />
+                <CreatePost />
             </div>
         </Provider>
 

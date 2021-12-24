@@ -1,27 +1,19 @@
-import React from "react";
+
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addPost } from "../redux/actions";
-import  PostItem from ""
+import  PostItem from "./PostItem"
 
-let postData = getData();
 
-function getOptionList(){
-    return (
-        options.map((option) => (
-            <option value={option.name}>
-                {option.name}
-            </option>
-        ))
-    );
-}
 
 export default function CreatePost() {
     const [content, setContent] = useState("");
     const [image, setImage] = useState("");
-    const posts = useSelector((state) => state.posts)
+    const [name, setName] = useState("Jules Winnfield");
 
+    const posts = useSelector((state) => state.posts)
+    console.log(posts)
     const getDate = () => {
         const dateObj = new Date();
         const month = dateObj.getUTCMonth() + 1;
@@ -29,16 +21,26 @@ export default function CreatePost() {
         const year = dateObj.getUTCFullYear();
         return year + "/" + month + "/" + day;
     }
-
+  
+    function getOptionList(posts){
+      
+        return(
+            posts.map((post,key) => (
+                <option key={key} value={post.name}>
+                    {post.name}
+                </option>
+            ))
+        );
+            }
     const dispatch = useDispatch()
     const onCreatePost = (e) => {
-        ev.preventDefault();
-        const getName = postData.find((author) => author.name === name)
+        e.preventDefault();
+        const post = posts.find((post) => post.name === name);
         dispatch(addPost(
             {
-                name: getName(),
-                photo: photo,
-                nickname: nickname,
+                name: post.name ,
+                photo: post.photo,
+                nickname: post.nickname,
                 content: content,
                 image: image,
                 date: getDate(),
@@ -54,8 +56,8 @@ export default function CreatePost() {
             <input type="text" name="content"  placeholder="Type post's text" value={content} onChange={(e) => setContent(e.target.value)} />
             <input type="text" name="image"  placeholder="Paste image's link" value={image} onChange={(e) => setImage(e.target.value)} />
 
-            <select>
-                 {getOptionList()}
+            <select  name="name" value={name} onChange={(e) => setName(e.target.value)}>
+                 {getOptionList(posts)}
             </select>
             <button type="submit" onClick={onCreatePost}>
                 Add Post
