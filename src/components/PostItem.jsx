@@ -28,7 +28,7 @@ const PostItem = ({ post }) => {
         <img className="post_image" src={post.image} alt="Post" width="85%"/> 
         <div className="statistics">
             <span className="statistics_comments" onClick={() => setComment(count => count ? count - 1 : count + 1)}>{post.comments}</span>
-            <span className="statistics_shares" onClick={() => setRepeat(count => count ? count - 1 : count + 1)}>{post.shares}</span>
+            <span className="statistics_shares" onClick= {() => setShare(count => count ? count - 1 : count + 1)}>{post.shares}</span>
             <span className="statistics_likes" onClick={() => setLike(count => count ? count - 1 : count + 1)}>{post.likes}</span>
             <span className="statistics_save"></span>
         </div>
