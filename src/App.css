@@ -19,69 +19,69 @@ body {
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 10% (30% 30% 30%);
 }
+.post_container {
+  width: 70%;
+  height: auto;
+  margin: 80px auto;
+  padding: 3%;
+  background: rgba(255, 255, 255, 0.192);
+  border: 1px solid rgb(5, 5, 5);
+  border-radius: 10px;
+}
+
+.container_img_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container_info {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 50%;
+  height: 90px;
+}
 
 .user-image{
-  position: relative;
-  top: -60px;
+  margin-right: 1.5%;
+  display: inline;
   border-radius: 50%;
-  width: 100px;
-  grid-column-start: 0;
-  grid-column-end: 1;
-  grid-row-start: 0;
-  grid-row-end: 2;
 }
 
 .user-name {
-  position: relative;
-  top: -20px;
+  display: inline;
+  font-size: 26px;
   font-weight: bold;
   padding: 3px;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 0;
-  grid-row-end: 1;
 }
+
+.user-name img {
+  position: relative;
+  top: 15px;
+  left: 10px;
+}
+
 .user-nickname {
-  margin-left: 30px;
-  margin-top: -20px;
   text-decoration: none;
   padding: 3px;
-  color: rgb(80, 78, 78);
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 0;
-  grid-row-end: 1;
+  color: #FFFFFF;
 }
+
 .post-date {
-  margin-top: -20px;
+  display: inline;
   padding: 3px;
-  color: rgb(80, 78, 78);
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 0;
-  grid-row-end: 1;
-} 
+}
+
 .post-content {
-  position: relative;
-  top: -20px;
+  margin: 0 0 1% 10%;
   padding: 3px;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
 }
 
 .post-image {
-  width: 85%;
-  margin: 0 0 0 110px;
+  margin: 0 0 0 10%;
   border-radius: 20px;
-}
-
-.statistics {
-  margin: 0 0 0 110px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  color: rgb(126, 126, 126);
 }
 
 .statistics_comments::before,
@@ -92,7 +92,19 @@ body {
     top: 15px;
      left: -20px; 
 }
-
+.statistics {
+  cursor: pointer;
+  margin: 0 0 0 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-weight: bold;
+}
+.form__create-post {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
 .statistics_likes::before {
   content: url(./assests/img/likes.png);
 }

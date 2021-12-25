@@ -46,7 +46,7 @@ export const addPost = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST:
             return {
-                posts: [...state.posts, action.payload]
+                posts: [action.payload, ...state.posts]
             }
         default:
             return state;

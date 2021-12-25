@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addPost } from "../redux/actions";
-import  PostItem from "./PostItem"
+import PostItem from "./PostItem"
 
 
 
@@ -21,24 +21,24 @@ export default function CreatePost() {
         const year = dateObj.getUTCFullYear();
         return year + "/" + month + "/" + day;
     }
-  
-    function getOptionList(posts){
-      
-        return(
-            posts.map((post,key) => (
-                <option key={key} value={post.name}>
+
+    function getOptionList(posts) {
+
+        return (
+            posts.map((post, key) => (
+                <option value={post.name}>
                     {post.name}
                 </option>
             ))
         );
-            }
+    }
     const dispatch = useDispatch()
     const onCreatePost = (e) => {
         e.preventDefault();
         const post = posts.find((post) => post.name === name);
         dispatch(addPost(
             {
-                name: post.name ,
+                name: post.name,
                 photo: post.photo,
                 nickname: post.nickname,
                 content: content,
@@ -52,17 +52,17 @@ export default function CreatePost() {
         setImage("");
     }
     return (
-        <form className="form__create-post" onSubmit={onCreatePost}>
-            <input type="text" name="content"  placeholder="Type post's text" value={content} onChange={(e) => setContent(e.target.value)} />
-            <input type="text" name="image"  placeholder="Paste image's link" value={image} onChange={(e) => setImage(e.target.value)} />
+        <form onSubmit={onCreatePost}>
+            <input type="text" name="content" placeholder="Type post's text" value={content} onChange={(e) => setContent(e.target.value)} />
+            <input type="text" name="image" placeholder="Paste image's link" value={image} onChange={(e) => setImage(e.target.value)} />
 
-            <select  name="name" value={name} onChange={(e) => setName(e.target.value)}>
-                 {getOptionList(posts)}
+            <select name="name" value={name} onChange={(e) => setName(e.target.value)}>
+                {getOptionList(posts)}
             </select>
             <button type="submit" onClick={onCreatePost}>
                 Add Post
             </button>
-            { posts.map((post) => <PostItem post={post}/>)}
+            {posts.map((post) => <PostItem post={post} />)}
         </form>
     );
 }

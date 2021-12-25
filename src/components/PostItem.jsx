@@ -9,22 +9,22 @@ const PostItem = ({ post }) => {
     const [share, setShare] = useState(0);
 
     return (
-        <div className="post_container">
+        <div className="post">
         <div>
             <div className="container_img_info">
-                <img className="user_photo" src={post.photo}  alt="User" width="100px" />
+                <img className="user-image" src={post.photo}  alt="User" width="100px" />
                 <div className="container_info">
-                    <div className="user_name">
+                    <div className="user-name">
                         {post.name}
                         <img src={CheckedIcon} alt="Checked icon" />
                     </div>
-                    <a className="user_nickname" href="/">{post.nickname}</a>
-                    <div className="post_date">{post.date}</div>
+                    <a className="user-nickname" href="/">{post.nickname}</a>
+                    <div className="post-date">{post.date}</div>
                 </div>
             </div>
-            <div className="post_content">{post.content}</div>
+            <div className="post-content">{post.content}</div>
         </div>
-        <img className="post_image" src={post.image} alt="Post" width="85%"/> 
+        <img className="post-image" src={post.image} alt="Post" width="85%"/> 
         <div className="statistics">
             <span className="statistics_comments" onClick={() => setComment(count => count === 0 ? count + 1 : count - 1)}>{post.comments + comment}</span>
             <span className="statistics_shares" onClick= {() => setShare(count => count === 0? count + 1 : count - 1)}>{post.shares + share}</span>
