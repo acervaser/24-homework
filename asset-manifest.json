@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/24-homework/static/css/main.a617e044.chunk.css",
-    "main.js": "/24-homework/static/js/main.791f637a.chunk.js",
-    "main.js.map": "/24-homework/static/js/main.791f637a.chunk.js.map",
-    "runtime-main.js": "/24-homework/static/js/runtime-main.a377553d.js",
-    "runtime-main.js.map": "/24-homework/static/js/runtime-main.a377553d.js.map",
-    "static/js/2.3f67a01c.chunk.js": "/24-homework/static/js/2.3f67a01c.chunk.js",
-    "static/js/2.3f67a01c.chunk.js.map": "/24-homework/static/js/2.3f67a01c.chunk.js.map",
-    "static/js/3.18b90cf8.chunk.js": "/24-homework/static/js/3.18b90cf8.chunk.js",
-    "static/js/3.18b90cf8.chunk.js.map": "/24-homework/static/js/3.18b90cf8.chunk.js.map",
+    "main.css": "/24-homework/static/css/main.2e472066.chunk.css",
+    "main.js": "/24-homework/static/js/main.414da1bc.chunk.js",
+    "main.js.map": "/24-homework/static/js/main.414da1bc.chunk.js.map",
+    "runtime-main.js": "/24-homework/static/js/runtime-main.7af13e9f.js",
+    "runtime-main.js.map": "/24-homework/static/js/runtime-main.7af13e9f.js.map",
+    "static/js/2.de77d043.chunk.js": "/24-homework/static/js/2.de77d043.chunk.js",
+    "static/js/2.de77d043.chunk.js.map": "/24-homework/static/js/2.de77d043.chunk.js.map",
     "index.html": "/24-homework/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/24-homework/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.3f67a01c.chunk.js.LICENSE.txt": "/24-homework/static/js/2.3f67a01c.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/24-homework/static/media/logo.6ce24c58.svg"
+    "static/css/main.2e472066.chunk.css.map": "/24-homework/static/css/main.2e472066.chunk.css.map",
+    "static/js/2.de77d043.chunk.js.LICENSE.txt": "/24-homework/static/js/2.de77d043.chunk.js.LICENSE.txt",
+    "static/media/Jules.6be56581.jpg": "/24-homework/static/media/Jules.6be56581.jpg",
+    "static/media/Mia.c8a1fcad.jpg": "/24-homework/static/media/Mia.c8a1fcad.jpg",
+    "static/media/Point.6385c8f6.jpg": "/24-homework/static/media/Point.6385c8f6.jpg",
+    "static/media/Vincent.659501bf.jpg": "/24-homework/static/media/Vincent.659501bf.jpg",
+    "static/media/classmates.2ee6ffce.jpg": "/24-homework/static/media/classmates.2ee6ffce.jpg",
+    "static/media/suit.8fcbf7ba.jpg": "/24-homework/static/media/suit.8fcbf7ba.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a377553d.js",
-    "static/js/2.3f67a01c.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.791f637a.chunk.js"
+    "static/js/runtime-main.7af13e9f.js",
+    "static/js/2.de77d043.chunk.js",
+    "static/css/main.2e472066.chunk.css",
+    "static/js/main.414da1bc.chunk.js"
   ]
 }
