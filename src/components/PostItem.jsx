@@ -11,9 +11,9 @@ const PostItem = ({ post }) => {
     return (
         <div className="post">
         <div>
-            <div className="container_img_info">
+            <div className="container">
                 <img className="user-image" src={post.photo}  alt="User" width="100px" />
-                <div className="container_info">
+                <div className="container-info">
                     <div className="user-name">
                         {post.name}
                         <img src={CheckedIcon} alt="Checked icon" />

@@ -12,30 +12,12 @@ body {
   background: rgb(21, 32, 43);
   border-radius: 10px;
 }
-.wrapper {
-  width: 80%;
-  height: 90px;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 10% (30% 30% 30%);
-}
-.post_container {
-  width: 70%;
-  height: auto;
-  margin: 80px auto;
-  padding: 3%;
-  background: rgba(255, 255, 255, 0.192);
-  border: 1px solid rgb(5, 5, 5);
-  border-radius: 10px;
-}
-
-.container_img_info {
+.container {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-
-.container_info {
+.container-info {
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -99,12 +81,8 @@ body {
   grid-template-columns: repeat(4, 1fr);
   font-weight: bold;
 }
-.form__create-post {
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-}
+
+
 .statistics_likes::before {
   content: url(./assests/img/likes.png);
 }
